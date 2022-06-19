@@ -13,7 +13,9 @@
                "lib/libBearLibTerminal.so"))
   (:darwin (:or "Contents/Resources/libBearLibTerminal.dylib"
                 "libBearLibTerminal.dylib"
-                "lib/libBearLibTerminal.dylib")))
+                "lib/libBearLibTerminal.dylib"))
+  (:windows (:or "lib/BearLibTerminal.dll"
+                 "lib/BearLibTerminal.lib")))
 
 (cffi:use-foreign-library blt:bearlibterminal)
 
